@@ -1,0 +1,17 @@
+.stopoptions {
+  margin: 20px 0;
+}
+
+.stopoptions__header {  
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.stopoptions__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
