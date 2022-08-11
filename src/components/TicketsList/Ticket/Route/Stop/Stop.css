@@ -1,0 +1,23 @@
+.ticket__stop {
+  position: relative;
+  margin: 0 20px;
+  padding: 0 40px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #9ea9b7;
+  border-bottom: 3px solid #9ea9b7;
+  font-size: 16px;
+}
+
+.ticket__stop::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -13px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../../../../img/airplane.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

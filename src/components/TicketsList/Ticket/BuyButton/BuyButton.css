@@ -1,11 +1,18 @@
 .ticket__buy {
+  width: 100%;
   border: none;
   border-radius: 10px;
-  padding: 15px 20px;
-  background-color: #ff521f;
+  padding: 10px 30px;
+  background-color: #ff6d00;
   color: #fff;
+  font-size: 20px;
+  line-height: 26px;
 }
 
 .ticket__buy:hover {
-  background-color: #ff6f32;
+  background-color: #ff8124;
+}
+
+.ticket__buy span {
+  display: block;
 }

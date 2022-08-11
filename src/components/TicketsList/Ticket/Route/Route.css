@@ -1,0 +1,6 @@
+.ticket__route {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  padding: 30px;
+}

@@ -1,0 +1,17 @@
+.ticket__place {
+  flex-grow: 1;
+}
+
+.ticket__time {
+  font-size: 48px;
+  padding-bottom: 10px;
+}
+
+.ticket__city {
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.ticket__date {
+  color: #9ea9b7;
+}
