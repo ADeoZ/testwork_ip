@@ -2,11 +2,26 @@ import "./App.css";
 import React, { createContext, useState } from "react";
 import Filter from "./components/Filters";
 import Logo from "./components/Logo";
-import TicketsList from "./components/TicketsList";
+import TicketsList, { TicketsInterface } from "./components/TicketsList";
 import TicketsData from "./json/tickets.json";
 
-export const CurrencyContext = createContext<any>(null);
-export const StopsContext = createContext<any>(null);
+interface CurrencyContextInterface {
+  current: string,
+  setCurrent: (currency: string) => void,
+  exchange: {
+    "RUB": number,
+    "USD": number,
+    "EUR": number
+  }
+}
+
+interface StopsContextInterface {
+  stopsFilter: number[],
+  setStopsFilter: (stops: number[]) => void,
+}
+
+export const CurrencyContext = createContext<CurrencyContextInterface | null>(null);
+export const StopsContext = createContext<StopsContextInterface | null>(null);
 
 function App() {
 
@@ -30,7 +45,7 @@ function App() {
   }
 
   // Фильтрация
-  const tickets = TicketsData.tickets.filter((ticket) => stopsFilter.includes(ticket.stops));
+  const tickets: TicketsInterface[] = TicketsData.tickets.filter((ticket) => stopsFilter.includes(ticket.stops));
 
   return (
     <>
