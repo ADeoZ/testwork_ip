@@ -2,15 +2,13 @@ import "./Ticket.css";
 import AviaLogo from "./AviaLogo";
 import BuyButton from "./BuyButton";
 import Route from "./Route";
-import { isFocusable } from "@testing-library/user-event/dist/utils";
-
 
 export default function Ticket({ info }: any) {
   return (
     <div className="ticket">
       <div className="ticket__left">
         <AviaLogo carrier={info.carrier} />
-        <BuyButton price={info.price} currency={"RUB"} />
+        <BuyButton price={info.price} />
       </div>
       <div className="ticket__right">
         <Route

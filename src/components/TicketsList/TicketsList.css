@@ -1,4 +1,11 @@
 .tickets-list {
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
+}
+
+.tickets-list__no-tickets {
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
 }

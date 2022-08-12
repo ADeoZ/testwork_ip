@@ -11,10 +11,21 @@
 
 .ticket__left {
   padding: 30px;
-  width: 207px;
+  min-width: 207px;
   border-right: 1px solid #e4e7e8;
 }
 
 .ticket__right {
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  flex: 1 1 100%;
+}
+
+@media (max-width: 1130px) {
+  .ticket {
+    flex-wrap: wrap;
+  }
+
+  .ticket__left {
+    width: 100%;
+  }
 }

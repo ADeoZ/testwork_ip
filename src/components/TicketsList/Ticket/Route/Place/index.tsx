@@ -5,7 +5,7 @@ export default function Place({ airport, city, date, time }: any) {
   const weekdaysNames = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
   const monthsNames = ["янв", "фев", "март", "апр", "май", "июнь", "июль", "авг", "сент", "окт", "нояб", "дек"];
 
-  const dateObj = new Date(date.replace(/(\d{2})\.(\d{2})\.(\d{2})/, '$2.$1.$3'));
+  const dateObj = new Date(date.replace(/(\d{2})\.(\d{2})\.(\d{2})/, '$2/$1/20$3'));
   const formattedDate = `${dateObj.getDate()} ${monthsNames[dateObj.getMonth()]} ${dateObj.getFullYear()}, ${weekdaysNames[dateObj.getDay()]}`;
 
   return (
