@@ -1,9 +1,15 @@
+import React from "react";
 import "./Ticket.css";
 import AviaLogo from "./AviaLogo";
 import BuyButton from "./BuyButton";
 import Route from "./Route";
+import { TicketsInterface } from "..";
 
-export default function Ticket({ info }: any) {
+interface TicketProps {
+  info: TicketsInterface;
+}
+
+export default function Ticket({ info }: TicketProps) {
   return (
     <div className="ticket">
       <div className="ticket__left">
@@ -13,13 +19,13 @@ export default function Ticket({ info }: any) {
       <div className="ticket__right">
         <Route
           origin={info.origin}
-          originName={info.origin_name}
+          origin_name={info.origin_name}
           destination={info.destination}
-          destinationName={info.destination_name}
-          departureDate={info.departure_date}
-          departureTime={info.departure_time}
-          arrivalDate={info.arrival_date}
-          arrivalTime={info.arrival_time}
+          destination_name={info.destination_name}
+          departure_date={info.departure_date}
+          departure_time={info.departure_time}
+          arrival_date={info.arrival_date}
+          arrival_time={info.arrival_time}
           stops={info.stops}
         />
       </div>

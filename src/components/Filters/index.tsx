@@ -1,3 +1,4 @@
+import React from "react";
 import "./Filters.css";
 import Currencies from "./Currencies";
 import StopOptions from "./StopOptions";

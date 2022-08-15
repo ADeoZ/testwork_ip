@@ -1,14 +1,18 @@
+import React from "react";
+import { AviaCarrierInterface } from "../..";
 import "./AviaLogo.css";
 
-export default function AviaLogo({carrier}: any) {
-  //https://mpics.avs.io/al_square/64/64/SU.png
+interface AviaCarriersInterface {
+  [name: string]: string;
+}
 
-  const aviaNames: any = {
-    "TK": "Turkish Airlines",
-    "S7": "S7 Airlines",
-    "SU": "Аэрофлот",
-    "BA": "British Airways",
-  }
+export default function AviaLogo({ carrier }: AviaCarrierInterface) {
+  const aviaNames: AviaCarriersInterface = {
+    TK: "Turkish Airlines",
+    S7: "S7 Airlines",
+    SU: "Аэрофлот",
+    BA: "British Airways",
+  };
 
   return (
     <div className="ticket__logo">
@@ -17,5 +21,5 @@ export default function AviaLogo({carrier}: any) {
       </div>
       {aviaNames[carrier]}
     </div>
-  )
+  );
 }

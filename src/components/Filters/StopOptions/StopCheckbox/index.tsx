@@ -1,9 +1,16 @@
+import React from "react";
 import "./StopCheckbox.css";
 
-export default function StopCheckbox({ value, handler, checked }: any) {
+interface StopCheckboxProps {
+  value: string;
+  handler: (value: string) => void;
+  checked: boolean;
+}
+
+export default function StopCheckbox({ value, handler, checked }: StopCheckboxProps) {
   return (
     <label className="stopcheck">
-      <input type="checkbox" onChange={(event) => handler(value)} checked={checked}/>
+      <input type="checkbox" onChange={() => handler(value)} checked={checked} />
       {value}
     </label>
   );
